@@ -7,15 +7,34 @@ public class JwtResponse {
     private String type = "Bearer";
     private Long id;
     private String username;
+    private String password;
+    private String decryptedPassword;
     private String email;
     private List<String> roles;
 
-    public JwtResponse(String accessToken, Long id, String username, String email, List<String> roles) {
+    public JwtResponse(String accessToken, Long id, String username,String password, String email, List<String> roles) {
         this.token = accessToken;
         this.id = id;
         this.username = username;
+        this.password = password;
         this.email = email;
         this.roles = roles;
+    }
+
+    public String getDecryptedPassword() {
+        return decryptedPassword;
+    }
+
+    public void setDecryptedPassword(String decryptedPassword) {
+        this.decryptedPassword = decryptedPassword;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAccessToken() {

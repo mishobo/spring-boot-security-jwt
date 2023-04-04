@@ -114,6 +114,7 @@ public class ImplUserService implements UserService {
                 jwt,
                 userDetails.getId(),
                 userDetails.getUsername(),
+                userDetails.getPassword(),
                 userDetails.getEmail(),
                 roles));
     }
